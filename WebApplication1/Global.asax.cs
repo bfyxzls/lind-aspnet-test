@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -11,7 +9,7 @@ using WEBAPI.Core;
 
 namespace WebApplication1
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {
@@ -19,15 +17,24 @@ namespace WebApplication1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
             Task.Run(() =>
             {
-                RabbitMQSubscriber rabbitMqSubscriber = new RabbitMQSubscriber();
-                rabbitMqSubscriber.SubscribeFanout<UserInfo>("test_fanout", msg =>
+                var rabbitMqSubscriber = new RabbitMQSubscriber();
+                rabbitMqSubscriber.SubscribeFanout<UserInfo>("test_fanout",
+                    msg => { Console.WriteLine("fanout:" + msg.name); });
+            });
+
+            Task.Run(() =>
+            {
+                var rabbitMqSubscriber = new RabbitMQSubscriber(exchangeName:"topicEx");
+                rabbitMqSubscriber.Subscribe<UserInfo>( "test_queue", msg =>
                 {
-                    Console.WriteLine(msg.name);
+                    Console.WriteLine("queue:" + msg.name);
+                    return true;
                 });
             });
-            
         }
     }
 }

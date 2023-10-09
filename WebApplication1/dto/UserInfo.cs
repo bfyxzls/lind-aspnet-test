@@ -2,7 +2,7 @@
 {
     public class UserInfo
     {
-        public string name;
         public int age;
+        public string name;
     }
 }

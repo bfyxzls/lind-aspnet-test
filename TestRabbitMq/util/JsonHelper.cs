@@ -1,17 +1,17 @@
-using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
+using Newtonsoft.Json;
 
 namespace WEBAPI.Core
 {
     public class JsonHelper
     {
-        private static object lockObj = new object();
+        private static object lockObj = new();
+
         /// <summary>
-        /// 将对象转为Json字符串
+        ///     将对象转为Json字符串
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -26,8 +26,9 @@ namespace WEBAPI.Core
                 return "";
             }
         }
+
         /// <summary>
-        /// 将字符串转为对象(转换失败直接new一个对象,不返回null)
+        ///     将字符串转为对象(转换失败直接new一个对象,不返回null)
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -39,11 +40,12 @@ namespace WEBAPI.Core
             }
             catch (Exception ex)
             {
-                return default(T);
+                return default;
             }
         }
+
         /// <summary>
-        /// 将字符串转为对象(转换失败返回null)
+        ///     将字符串转为对象(转换失败返回null)
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -60,7 +62,7 @@ namespace WEBAPI.Core
         }
 
         /// <summary>
-        /// 将字符串转为匿名对象，调用方式：DeserializeAnonymousType(value, new { a = 1, b = "" });
+        ///     将字符串转为匿名对象，调用方式：DeserializeAnonymousType(value, new { a = 1, b = "" });
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -76,24 +78,25 @@ namespace WEBAPI.Core
             }
         }
 
-       
 
         #region Binary
+
         /// <summary>
-        /// 二进制序列化
+        ///     二进制序列化
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public static byte[] SerializeToBinary(object value)
         {
-            BinaryFormatter serializer = new BinaryFormatter();
-            MemoryStream memStream = new MemoryStream();
+            var serializer = new BinaryFormatter();
+            var memStream = new MemoryStream();
             memStream.Seek(0, 0);
             serializer.Serialize(memStream, value);
             return memStream.ToArray();
         }
+
         /// <summary>
-        /// 二进制反序列化
+        ///     二进制反序列化
         /// </summary>
         /// <param name="someBytes"></param>
         /// <returns></returns>
@@ -110,9 +113,10 @@ namespace WEBAPI.Core
                 memoryStream.Position = 0;
                 res = bf.Deserialize(memoryStream);
             }
-            return res;
 
+            return res;
         }
+
         #endregion
     }
 }

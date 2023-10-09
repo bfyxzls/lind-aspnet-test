@@ -3,17 +3,14 @@ using WEBAPI.Core;
 
 namespace ConsoleApp1
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            RabbitMQSubscriber rabbitMqSubscriber = new RabbitMQSubscriber();
-            rabbitMqSubscriber.SubscribeFanout<UserInfo>("test_fanout", msg =>
-            {
-                Console.WriteLine(msg.name);
-            });
-            RabbitMQPublisher rabbitMqPublisher = new RabbitMQPublisher();
-            rabbitMqPublisher.PublishFanout("test_fanout","hello");
+            var rabbitMqSubscriber = new RabbitMQSubscriber();
+            rabbitMqSubscriber.SubscribeFanout<UserInfo>("test_fanout", msg => { Console.WriteLine(msg.name); });
+            var rabbitMqPublisher = new RabbitMQPublisher();
+            rabbitMqPublisher.PublishFanout("test_fanout", "hello");
             Console.WriteLine("Hello World!");
             Console.ReadKey();
         }

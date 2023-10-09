@@ -5,6 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "架构图", "架构图", "{F62DF4C8-317B-4A59-AB0F-B76E0241628F}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\个人技术资料\多级缓存的设计.png = ..\..\个人技术资料\多级缓存的设计.png
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{9157FEC2-D258-4BF9-B3EA-48AF8715AD08}"
