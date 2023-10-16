@@ -6,8 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
-        <PackageReference Include="RabbitMQ.Client" Version="6.5.0"/>
+      <Compile Remove="OTPGenerator.cs" />
+      <Compile Remove="TOTP.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
     </ItemGroup>
 
 </Project>
