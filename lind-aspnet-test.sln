@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33423.256
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRabbitMq", "TestRabbitMq\TestRabbitMq.csproj", "{62231D39-1B51-47A3-97DD-A9A296ED8773}"
 EndProject
@@ -13,11 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "架构图", "架构图", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{9157FEC2-D258-4BF9-B3EA-48AF8715AD08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{4102EB7D-807A-4CA6-B24B-03CB699D09F7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{1A5A8311-3F9C-4864-85C8-B2254FEEEE27}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{EF372B32-F00F-4070-BF2C-77E043FD2C31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreWebApp", "WebApplication3\NetCoreWebApp.csproj", "{28C5669A-D8F4-43E0-8C23-BD30BC9F02CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +29,10 @@ Global
 		{9157FEC2-D258-4BF9-B3EA-48AF8715AD08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9157FEC2-D258-4BF9-B3EA-48AF8715AD08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9157FEC2-D258-4BF9-B3EA-48AF8715AD08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4102EB7D-807A-4CA6-B24B-03CB699D09F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4102EB7D-807A-4CA6-B24B-03CB699D09F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4102EB7D-807A-4CA6-B24B-03CB699D09F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4102EB7D-807A-4CA6-B24B-03CB699D09F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A5A8311-3F9C-4864-85C8-B2254FEEEE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A5A8311-3F9C-4864-85C8-B2254FEEEE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A5A8311-3F9C-4864-85C8-B2254FEEEE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A5A8311-3F9C-4864-85C8-B2254FEEEE27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF372B32-F00F-4070-BF2C-77E043FD2C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF372B32-F00F-4070-BF2C-77E043FD2C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF372B32-F00F-4070-BF2C-77E043FD2C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF372B32-F00F-4070-BF2C-77E043FD2C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C5669A-D8F4-43E0-8C23-BD30BC9F02CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C5669A-D8F4-43E0-8C23-BD30BC9F02CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C5669A-D8F4-43E0-8C23-BD30BC9F02CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C5669A-D8F4-43E0-8C23-BD30BC9F02CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
