@@ -15,7 +15,7 @@ namespace ConsoleApp1
             // var rabbitMqPublisher = new RabbitMQPublisher();
             // rabbitMqPublisher.PublishFanout("test_fanout", "hello");
 
-            string secretKey = "pkulaw"; // 这是你的共享密钥
+            string secretKey = "ABCDEFHGIJKLMNOPQRST234UVWXYZ567"; // 这是你的共享密钥
             int timeStep = 30; // TOTP时间步长，以秒为单位
             int totpLength = 8; // TOTP生成的密码长度
 

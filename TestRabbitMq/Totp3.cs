@@ -33,6 +33,11 @@ namespace TestRabbitMq
 
         private static byte[] Base32Decode(string base32)
         {
+            if (base32.Length != 32)
+            {
+                throw new Exception("base32Key length must be 32 characters");
+            }
+
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
             var bits = base32.ToUpper().ToCharArray().Select(c => Convert.ToString(chars.IndexOf(c), 2).PadLeft(5, '0')).Aggregate((a, b) => a + b);
             return Enumerable.Range(0, bits.Length / 8).Select(i => Convert.ToByte(bits.Substring(i * 8, 8), 2)).ToArray();
